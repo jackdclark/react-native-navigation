@@ -107,7 +107,8 @@ public class LightBox extends Dialog implements DialogInterface.OnDismissListene
     }
 
     public void destroy() {
-        content.unmountReactView();
+        // Temporary fix for https://github.com/wix/react-native-navigation/issues/1502
+        // content.unmountReactView();
         dismiss();
     }
 
